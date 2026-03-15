@@ -11,6 +11,13 @@
 ---
 
 
-1. Create an `<img src="...." alt="A">
+1. Create an `<img src="...." alt="A">` linking to a broken link on develop.
 
 2. Note what happens if `src` is broken.
+
+---
+
+# TEST AREA
+
+Try Markdown-style images and HTML image stynax.
+ 
