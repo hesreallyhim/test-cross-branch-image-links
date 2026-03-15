@@ -82,3 +82,35 @@ Expected: may render, but this is intentionally a secondary probe because `raw.g
   alt="Probe 06: html img blob raw query develop asset"
   width="320"
 >
+
+## Alt Text Focused Variants
+
+These probes are narrower. They are intended to answer whether a cross-branch image that would otherwise be valid degrades to visible `alt` text when the branch-targeted URL is broken.
+
+### Probe 07: HTML img + raw.githubusercontent.com + working cross-branch image with explicit alt
+
+Expected: the image should render, and the long `alt` text should not be visible.
+
+<img
+  src="https://raw.githubusercontent.com/hesreallyhim/test-cross-branch-image-links/develop/assets/inbox-02.png"
+  alt="Probe 07 alt text control: this text should stay hidden if the cross-branch image loads correctly."
+  width="320"
+  height="120"
+>
+
+### Probe 08: HTML img + raw.githubusercontent.com + broken cross-branch image with explicit alt
+
+Expected: the image should fail, and this is the best candidate in the suite for checking whether GitHub exposes the `alt` text in place of the broken image.
+
+<img
+  src="https://raw.githubusercontent.com/hesreallyhim/test-cross-branch-image-links/develop/assets/inbox-02-does-not-exist.png"
+  alt="Probe 08 alt fallback target: if GitHub surfaces alt text for broken cross-branch HTML images, this sentence should appear."
+  width="320"
+  height="120"
+>
+
+### Probe 09: Markdown image + broken raw cross-branch URL with explicit alt
+
+Expected: the image should fail. This checks whether Markdown-generated image HTML differs from handwritten `<img>` when the URL is broken.
+
+![Probe 09 alt fallback target: if GitHub surfaces alt text for broken Markdown cross-branch images, this sentence should appear.](https://raw.githubusercontent.com/hesreallyhim/test-cross-branch-image-links/develop/assets/inbox-03-does-not-exist.png)
