@@ -20,4 +20,9 @@
 # TEST AREA
 
 Try Markdown-style images and HTML image stynax.
- 
+
+## Probe 01: Markdown + raw.githubusercontent.com + develop-only asset
+
+This probe is rendered from `main`, but the image source explicitly targets `develop`.
+
+![Probe 01: Markdown raw develop asset](https://raw.githubusercontent.com/hesreallyhim/test-cross-branch-image-links/develop/assets/inbox-02.png)
