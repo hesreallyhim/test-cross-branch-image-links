@@ -40,7 +40,7 @@ Expected: should render if GitHub preserves a plain `<img>` tag whose `src` targ
   src="https://raw.githubusercontent.com/hesreallyhim/test-cross-branch-image-links/develop/assets/inbox-03.png"
   alt="Probe 02: html img raw develop asset"
   width="320"
->
+/>
 
 ### Probe 03: HTML picture/source + raw.githubusercontent.com + main fallback
 
@@ -49,12 +49,12 @@ Expected: if GitHub keeps `<picture>` and `<source srcset>`, the develop asset s
 <picture>
   <source
     srcset="https://raw.githubusercontent.com/hesreallyhim/test-cross-branch-image-links/develop/assets/inbox-02.png"
-  >
+  />
   <img
     src="assets/black-pixel-ish.png"
     alt="Probe 03: picture fallback image from main"
     width="320"
-  >
+  />
 </picture>
 
 ### Probe 04: HTML img + broken raw URL on develop
@@ -65,7 +65,7 @@ Expected: should fail visibly and reveal GitHub's broken-image behavior for an a
   src="https://raw.githubusercontent.com/hesreallyhim/test-cross-branch-image-links/develop/assets/does-not-exist.png"
   alt="Probe 04: broken html img raw develop asset"
   width="320"
->
+/>
 
 ### Probe 05: Negative control - relative path to a develop-only asset
 
@@ -81,7 +81,7 @@ Expected: may render, but this is intentionally a secondary probe because `raw.g
   src="https://github.com/hesreallyhim/test-cross-branch-image-links/blob/develop/assets/inbox-03.png?raw=1"
   alt="Probe 06: html img blob raw query develop asset"
   width="320"
->
+/>
 
 ## Alt Text Focused Variants
 
@@ -96,7 +96,7 @@ Expected: the image should render, and the long `alt` text should not be visible
   alt="Probe 07 alt text control: this text should stay hidden if the cross-branch image loads correctly."
   width="320"
   height="120"
->
+/>
 
 ### Probe 08: HTML img + raw.githubusercontent.com + broken cross-branch image with explicit alt
 
@@ -107,7 +107,7 @@ Expected: the image should fail, and this is the best candidate in the suite for
   alt="Probe 08 alt fallback target: if GitHub surfaces alt text for broken cross-branch HTML images, this sentence should appear."
   width="320"
   height="120"
->
+/>
 
 ### Probe 09: Markdown image + broken raw cross-branch URL with explicit alt
 
